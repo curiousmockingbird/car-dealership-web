@@ -38,6 +38,15 @@ namespace Dealership.Models {
       return _topSpeed;
     }
 
+    public string Placement()
+    {
+      if (_topSpeed > 90) {
+        return "good car";
+      } else {
+        return "bad car";
+      }
+    }
+
     public bool WorthBuying(int maxPrice)
     {
       return (_price <= maxPrice);

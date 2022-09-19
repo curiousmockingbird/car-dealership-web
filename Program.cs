@@ -38,6 +38,7 @@ namespace Dealership {
         Console.WriteLine("Original Price: $" + automobile.GetPrice());
         Console.WriteLine("Sale Price: $" + (automobile.GetPrice() * .8));
         Console.WriteLine("Top Speed: " + automobile.GetSpeed() + " mph");
+        Console.WriteLine("For Dakar Rally this is a " + automobile.Placement());
       }
     }
   }
