@@ -8,19 +8,26 @@ namespace Dealership.Models {
     private int _price;
     private int _miles;
     private int _topSpeed;
+    private int _year;
 
 
-    public Car(string makeModel, int price, int miles, int topSpeed)
+    public Car(string makeModel, int price, int miles, int topSpeed, int year)
     {
       _makeModel = makeModel;
       _price = price;
       _miles = miles;
       _topSpeed = topSpeed;
+      _year = year;
     }
 
     public string GetMakeModel()
     {
       return _makeModel;
+    }
+
+    public int GetYear()
+    {
+      return _year;
     }
 
     public int GetPrice()
@@ -44,6 +51,15 @@ namespace Dealership.Models {
         return "good car";
       } else {
         return "bad car";
+      }
+    }
+
+    public int Resale()
+    {
+      if (_year < 1979) {
+        return 800;
+      } else {
+        return 1000;
       }
     }
 
