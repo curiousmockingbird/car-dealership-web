@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Dealership.Models;
 
 namespace Dealership {
@@ -8,10 +9,10 @@ namespace Dealership {
   {
     public static void Main()
     {
-      Car volkswagen = new Car("1974 Volkswagen Thing", 1100, 368792);
-      Car yugo = new Car("1980 Yugo Koral", 700, 56000);
-      Car ford = new Car("1988 Ford Country Squire", 1400, 239001);
-      Car amc = new Car("1976 AMC Pacer", 400, 198000);
+      Car volkswagen = new Car("1974 Volkswagen Thing", 1100, 368792, 80);
+      Car yugo = new Car("1980 Yugo Koral", 700, 56000, 90);
+      Car ford = new Car("1988 Ford Country Squire", 1400, 239001, 100);
+      Car amc = new Car("1976 AMC Pacer", 400, 198000, 40);
 
       List<Car> Cars = new List<Car>() { volkswagen, yugo, ford, amc };
 
@@ -29,12 +30,15 @@ namespace Dealership {
         }
       }
 
+
       foreach(Car automobile in CarsMatchingSearch)
       {
         Console.WriteLine("----------------------");
         Console.WriteLine(automobile.GetMakeModel());
         Console.WriteLine(automobile.GetMiles() + " miles");
-        Console.WriteLine("$" + automobile.GetPrice());
+        Console.WriteLine("Original Price: $" + automobile.GetPrice());
+        Console.WriteLine("Sale Price: $" + (automobile.GetPrice() * .8));
+        Console.WriteLine("Top Speed: " + automobile.GetSpeed() + " mph");
       }
     }
   }
