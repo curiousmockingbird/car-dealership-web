@@ -1,62 +1,36 @@
 using System;
+using System.Collections.Generic;
 
 namespace Dealership.Models {
 
   public class Car
   {
-    private string _makeModel;
-    private int _price;
-    private int _miles;
-    private int _topSpeed;
-    private int _year;
+    public string MakeModel {get; set;}
+    public int Price {get; set;}
+    public int Miles {get; set;}
+    public int TopSpeed {get; set;}
+    public int Year { get; set; }
 
+    private static List<Car> _cars = new List<Car> {};
 
     public Car(string makeModel, int price, int miles, int topSpeed, int year)
     {
-      _makeModel = makeModel;
-      _price = price;
-      _miles = miles;
-      _topSpeed = topSpeed;
-      _year = year;
+      MakeModel = makeModel;
+      Price = price;
+      Miles = miles;
+      TopSpeed = topSpeed;
+      Year = year;
+      _cars.Add(this);
     }
 
-    public string GetMakeModel()
+    public static List<Car> GetAll()
     {
-      return _makeModel;
-    }
-
-    public int GetYear()
-    {
-      return _year;
-    }
-
-    public int GetPrice()
-    {
-      return _price;
-    }
-
-    public int GetMiles()
-    {
-      return _miles;
-    }
-
-    public int GetSpeed()
-    {
-      return _topSpeed;
-    }
-
-    public string Placement()
-    {
-      if (_topSpeed > 90) {
-        return "good car";
-      } else {
-        return "bad car";
-      }
+      return _cars;
     }
 
     public int Resale()
     {
-      if (_year < 1979) {
+      if (Year < 1979) {
         return 800;
       } else {
         return 1000;
@@ -65,8 +39,7 @@ namespace Dealership.Models {
 
     public bool WorthBuying(int maxPrice)
     {
-      return (_price <= maxPrice);
+      return (Price <= maxPrice);
     }
   }
-
 }

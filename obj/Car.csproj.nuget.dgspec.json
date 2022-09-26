@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/shanizalingle/Desktop/projects/car-dealership/Car.csproj": {}
+    "/Users/shanizalingle/Desktop/projects/c#/car-dealership/Car.csproj": {}
   },
   "projects": {
-    "/Users/shanizalingle/Desktop/projects/car-dealership/Car.csproj": {
+    "/Users/shanizalingle/Desktop/projects/c#/car-dealership/Car.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/shanizalingle/Desktop/projects/car-dealership/Car.csproj",
+        "projectUniqueName": "/Users/shanizalingle/Desktop/projects/c#/car-dealership/Car.csproj",
         "projectName": "Car",
-        "projectPath": "/Users/shanizalingle/Desktop/projects/car-dealership/Car.csproj",
+        "projectPath": "/Users/shanizalingle/Desktop/projects/c#/car-dealership/Car.csproj",
         "packagesPath": "/Users/shanizalingle/.nuget/packages/",
-        "outputPath": "/Users/shanizalingle/Desktop/projects/car-dealership/obj/",
+        "outputPath": "/Users/shanizalingle/Desktop/projects/c#/car-dealership/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/shanizalingle/.nuget/NuGet/NuGet.Config"
@@ -48,6 +48,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
