@@ -6,6 +6,13 @@ namespace Cars.Controllers
 {
   public class CarsController : Controller
   {
+    [HttpGet("/home")]
+    public ActionResult Home()
+    {
+      List<Car> allCars = Car.GetAll();
+      return View(allCars);
+    }
+
     [HttpGet("/cars")]
     public ActionResult Cars()
     {
@@ -25,5 +32,11 @@ namespace Cars.Controllers
       Car newCar = new Car(makeModel, price, miles, topSpeed, year);
       return RedirectToAction("Cars");
     }
+
+    /* [HttpGet("/cars/properties")]
+    public ActionResult Properties()
+    {
+
+    } */
   }
 }

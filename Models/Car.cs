@@ -28,18 +28,9 @@ namespace Dealership.Models {
       return _cars;
     }
 
-    public int Resale()
+    public static void ClearAll()
     {
-      if (Year < 1979) {
-        return 800;
-      } else {
-        return 1000;
-      }
-    }
-
-    public bool WorthBuying(int maxPrice)
-    {
-      return (Price <= maxPrice);
+      _cars.Clear();
     }
   }
 }

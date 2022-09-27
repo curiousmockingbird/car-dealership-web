@@ -7,7 +7,8 @@
   </head>
   <body>
 		@using Dealership.Models;
-		<h1>Here's a list of our cars:</h1>
+    <a href="/home"> <-- Go back to home page</a>
+		<h1>Available vehicles:</h1>
 		<!-- <a href='/cars/new'> Sell your!</a>
 		<a href='/cars'> See list of cars we got!</a> -->
 		
@@ -18,12 +19,12 @@
 			<ul>
 			@foreach(Car car in Model)
 			{
-				<li> @car.MakeModel </li>
+				<a href="/cars/properties"><li> @car.MakeModel </li></a>
 			}
 		</ul>
 		}
-		
-		<a href='/cars/new'> Add another car! </a>
+	
+		<p>	<a href='/cars/new'>Click here </a>to sell your vehicle</p>
 
   </body>
 </html>
