@@ -15619,6 +15619,16 @@
   "RootNamespace": "Car",
   "Documents": [
     {
+      "FilePath": "/Users/shanizalingle/Desktop/projects/c#/car-dealership/Views/Cars/Cars.cshtml",
+      "TargetPath": "Views\\Cars\\Cars.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/shanizalingle/Desktop/projects/c#/car-dealership/Views/Cars/CreateForm.cshtml",
+      "TargetPath": "Views\\Cars\\CreateForm.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/shanizalingle/Desktop/projects/c#/car-dealership/Views/Home/Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"

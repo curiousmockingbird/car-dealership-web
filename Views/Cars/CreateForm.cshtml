@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Car Dealership</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  </head>
+  <body>
+    <form action="/cars" method="post">
+      <p>Add a new car for sale</p>
+      <label for="makeModel">Model</label>
+      <input id="makeModel" name="makeModel" type="text">
+
+      <label for="price">Price</label>
+      <input id="price" name="price" type="number">
+
+      <label for="miles">Miles</label>
+      <input id="miles" name="miles" type="number">
+
+      <label for="topSpeed">Top speed</label>
+      <input id="topSpeed" name="topSpeed" type="number">
+
+      <label for="year">Year</label>
+      <input id="year" name="year" type="number" maxlength="4" minlength="4">
+      
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

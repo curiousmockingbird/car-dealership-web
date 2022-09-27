@@ -44,3 +44,5 @@
 /Users/shanizalingle/Desktop/projects/c#/car-dealership/obj/Debug/net5.0/Razor/Views/Home/Index.cshtml.g.cs
 /Users/shanizalingle/Desktop/projects/c#/car-dealership/obj/Debug/net5.0/Car.RazorTargetAssemblyInfo.cs
 /Users/shanizalingle/Desktop/projects/c#/car-dealership/obj/Debug/net5.0/Car.Views.pdb
+/Users/shanizalingle/Desktop/projects/c#/car-dealership/obj/Debug/net5.0/Razor/Views/Cars/CreateForm.cshtml.g.cs
+/Users/shanizalingle/Desktop/projects/c#/car-dealership/obj/Debug/net5.0/Razor/Views/Cars/Cars.cshtml.g.cs
