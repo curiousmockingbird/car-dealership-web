@@ -15,8 +15,15 @@ namespace Cars.Controllers
     [HttpGet("/cars")]
     public ActionResult Cars()
     {
+      Dictionary<string,dynamic> Models = new Dictionary<string,dynamic> ();
+
+      List<NewCar> allNewCars = NewCar.GetAllNew();
       List<Car> allCars = Car.GetAll();
-      return View(allCars);
+
+      Models.Add("AllNewCars", allNewCars);
+      Models.Add("AllCars", allCars);
+
+      return View(Models);
     }
 
     [HttpGet("/cars/new")]
@@ -33,13 +40,13 @@ namespace Cars.Controllers
     } 
 
 
-    /* [HttpPost("/cars")]
+    [HttpPost("/cars")]
     public ActionResult Create(string newMakeModel, int newPrice, int newMiles, int newTopSpeed, int newYear)
     {
       NewCar newCar = new NewCar(newMakeModel, newPrice, newMiles, newTopSpeed, newYear);
       List<NewCar> allNewCars = NewCar.GetAllNew();
       return RedirectToAction("Cars", allNewCars);
-    } */
+    }
 
   }
 }
