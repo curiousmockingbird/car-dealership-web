@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
 
-namespace Dealership.Models {
+namespace Dealership.Models
+{
 
   public class Car
   {
@@ -10,6 +11,8 @@ namespace Dealership.Models {
     public int Miles {get; set;}
     public int TopSpeed {get; set;}
     public int Year { get; set; }
+
+    public int Id { get; }
 
     private static List<Car> _cars = new List<Car> {};
 
@@ -21,6 +24,12 @@ namespace Dealership.Models {
       TopSpeed = topSpeed;
       Year = year;
       _cars.Add(this);
+      Id = _cars.Count;
+    }
+
+    public static Car Find(int searchId)
+    {
+      return _cars[searchId - 1];
     }
 
     public static List<Car> GetAll()

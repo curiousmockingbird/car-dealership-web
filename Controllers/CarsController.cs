@@ -6,12 +6,11 @@ namespace Cars.Controllers
 {
   public class CarsController : Controller
   {
-    [HttpGet("/home")]
-    public ActionResult Home()
-    {
-      List<Car> allCars = Car.GetAll();
-      return View(allCars);
-    }
+    // [HttpGet("/home")]
+    // public ActionResult Index()
+    // {
+    //   return View();
+    // }
 
     [HttpGet("/cars")]
     public ActionResult Cars()
@@ -21,22 +20,26 @@ namespace Cars.Controllers
     }
 
     [HttpGet("/cars/new")]
-    public ActionResult CreateForm()
+    public ActionResult New()
     {
       return View();
     }
 
-    [HttpPost("/cars")]
-    public ActionResult Create(string makeModel, int price, int miles, int topSpeed, int year)
+    [HttpGet("/cars/{id}")]
+    public ActionResult Show(int id)
     {
-      Car newCar = new Car(makeModel, price, miles, topSpeed, year);
-      return RedirectToAction("Cars");
-    }
+      Car foundCar = Car.Find(id);
+      return View(foundCar);
+    } 
 
-    /* [HttpGet("/cars/properties")]
-    public ActionResult Properties()
+
+    /* [HttpPost("/cars")]
+    public ActionResult Create(string newMakeModel, int newPrice, int newMiles, int newTopSpeed, int newYear)
     {
-
+      NewCar newCar = new NewCar(newMakeModel, newPrice, newMiles, newTopSpeed, newYear);
+      List<NewCar> allNewCars = NewCar.GetAllNew();
+      return RedirectToAction("Cars", allNewCars);
     } */
+
   }
 }

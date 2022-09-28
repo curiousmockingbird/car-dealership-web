@@ -6,7 +6,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   </head>
   <body>
+    @using Dealership.Models;
+    <h1>@Model.MakeModel</h1>
+    <p>Price: $@Model.Price</p>
+    <p>Miles: @Model.Miles</p>
+    <p>Top Speed: @Model.TopSpeed mph</p>
+    <p>Year: @Model.Year</p>
 
-	
+    <p>	<a href='/cars'>Click here </a>to go back to available cars</p>
   </body>
 </html>

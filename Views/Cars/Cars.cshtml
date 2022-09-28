@@ -7,22 +7,24 @@
   </head>
   <body>
 		@using Dealership.Models;
-    <a href="/home"> <-- Go back to home page</a>
+    <a href="/"> <-- Go back to home page</a>
 		<h1>Available vehicles:</h1>
 		<!-- <a href='/cars/new'> Sell your!</a>
 		<a href='/cars'> See list of cars we got!</a> -->
 		
-		@if (Model.Count == 0)
+		@if (Car.GetAll().Count == 0)
 		{
 			<p> No cars currently available. </p>
 		} else {
+      
 			<ul>
 			@foreach(Car car in Model)
 			{
-				<a href="/cars/properties"><li> @car.MakeModel </li></a>
+				<a href='/cars/@car.Id'><li> @car.MakeModel</li></a>
 			}
 		</ul>
 		}
+
 	
 		<p>	<a href='/cars/new'>Click here </a>to sell your vehicle</p>
 
