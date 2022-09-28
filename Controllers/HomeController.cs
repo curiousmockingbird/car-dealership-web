@@ -18,7 +18,6 @@ namespace Home.Controllers
       Car amc = new Car("AMC Pacer", 900, 198000, 40, 1976);
       
       List<Car> allCars = Car.GetAll();
-      // List<NewCar> allNewCars = NewCar.GetAllNew();
       return View(allCars);
     }
   }

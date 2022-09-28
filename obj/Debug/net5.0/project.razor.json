@@ -15619,6 +15619,11 @@
   "RootNamespace": "Car",
   "Documents": [
     {
+      "FilePath": "/Users/owner/Documents/Programación/Epicodus/Csharp/Tue-27-Aug/car-dealership/Views/Cars/NewShow.cshtml",
+      "TargetPath": "Views\\Cars\\NewShow.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/owner/Documents/Programación/Epicodus/Csharp/Tue-27-Aug/car-dealership/Views/Cars/Show.cshtml",
       "TargetPath": "Views\\Cars\\Show.cshtml",
       "FileKind": "mvc"

@@ -32,3 +32,4 @@
 /Users/owner/Documents/Programación/Epicodus/Csharp/Tue-27-Aug/car-dealership/obj/Debug/net5.0/Razor/Views/Cars/New.cshtml.g.cs
 /Users/owner/Documents/Programación/Epicodus/Csharp/Tue-27-Aug/car-dealership/obj/Debug/net5.0/Razor/Views/Cars/Show.cshtml.g.cs
 /Users/owner/Documents/Programación/Epicodus/Csharp/Tue-27-Aug/car-dealership/obj/Debug/net5.0/Razor/Views/Home/Index.cshtml.g.cs
+/Users/owner/Documents/Programación/Epicodus/Csharp/Tue-27-Aug/car-dealership/obj/Debug/net5.0/Razor/Views/Cars/NewShow.cshtml.g.cs

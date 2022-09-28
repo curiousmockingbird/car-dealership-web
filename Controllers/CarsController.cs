@@ -15,7 +15,7 @@ namespace Cars.Controllers
     [HttpGet("/cars")]
     public ActionResult Cars()
     {
-      Dictionary<string,dynamic> Models = new Dictionary<string,dynamic> ();
+      Dictionary<string, dynamic> Models = new Dictionary<string, dynamic> ();
 
       List<NewCar> allNewCars = NewCar.GetAllNew();
       List<Car> allCars = Car.GetAll();
@@ -35,9 +35,21 @@ namespace Cars.Controllers
     [HttpGet("/cars/{id}")]
     public ActionResult Show(int id)
     {
+      //Dictionary<string, dynamic> NewModels = new Dictionary<string, dynamic> ();
+
       Car foundCar = Car.Find(id);
+
+      // NewModels.Add("FoundCar", foundCar);
+      // NewModels.Add("FoundNewCar", foundNewCar);
       return View(foundCar);
     } 
+
+    /* [HttpGet("/cars/{id}new")]
+    public ActionResult NewShow(int newId)
+    {
+      NewCar foundNewCar = NewCar.Find(newId);
+      return View(foundNewCar);
+    }  */
 
 
     [HttpPost("/cars")]

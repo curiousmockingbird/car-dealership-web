@@ -9,7 +9,7 @@
 		@using Dealership.Models;
 
     <a href="/"> <-- Go back to home page</a>
-		<h1>Available vehicles:</h1>
+		<h2>Available vehicles:</h2>
 		
 		@if (Car.GetAll().Count == 0)
 		{
@@ -23,6 +23,8 @@
 			}
 		  </ul>
 		}
+
+		<h3>Your posted vehicles:</h3>
 
 		@if (NewCar.GetAllNew().Count == 0)
 		{
